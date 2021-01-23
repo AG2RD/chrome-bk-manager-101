@@ -1,2 +1,2 @@
-# chrome-bk-manager-101
+# chrome-extension-101
 Chrome extension poc
