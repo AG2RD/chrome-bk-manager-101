@@ -1,0 +1,23 @@
+{
+  "name": "chrome-bk-manager-101",
+  "version": "1.0.0",
+  "description": "chrome extension lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AG2RD/chrome-bk-manager-101.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AG2RD/chrome-bk-manager-101/issues"
+  },
+  "homepage": "https://github.com/AG2RD/chrome-bk-manager-101#readme",
+  "dependencies": {
+    "@angular/cli": "^11.1.1",
+    "emma": "^0.0.1"
+  }
+}
