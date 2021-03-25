@@ -14,5 +14,11 @@
   },
   "chrome_url_overrides": {
     "newtab": "index.html#/main"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
 }
