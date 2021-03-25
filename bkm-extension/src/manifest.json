@@ -6,22 +6,13 @@
   "permissions": ["activeTab", "webNavigation", "bookmarks", "contextMenus"],
   "omnibox": { "keyword": "nt" },
   "page_action": {
-    "default_popup": "index.html",
+    "default_popup": "index.html#/popup",
     "default_icon": "favicon.ico"
   },
   "background": {
     "scripts": ["background.js", "runtime.js"]
   },
   "chrome_url_overrides": {
-    "newtab": "index.html"
-  },
-  "commands": {
-    "_execute_browser_action": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+F",
-        "mac": "MacCtrl+Shift+F"
-      },
-      "description": "Opens hello.html"
-    }
+    "newtab": "index.html#/main"
   }
 }
