@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "yarn run cypress open"
@@ -21,11 +21,13 @@
     "@angular/platform-browser": "~11.1.0",
     "@angular/platform-browser-dynamic": "~11.1.0",
     "@angular/router": "~11.1.0",
+    "@types/chrome": "^0.0.133",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^11.1.1",
     "@angular-builders/jest": "^11.0.0",
     "@angular-devkit/build-angular": "~0.1101.1",
     "@angular/cli": "~11.1.1",
@@ -39,6 +41,7 @@
     "ts-jest": "^26.4.4",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.2"
+    "typescript": "~4.1.2",
+    "webpack-extension-reloader": "^1.1.4"
   }
 }

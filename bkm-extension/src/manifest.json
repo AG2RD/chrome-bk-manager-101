@@ -1,12 +1,19 @@
 {
   "name": "BKM",
-  "default_locale": "en",
   "description": "Bookmark manager with manifest v2",
   "version": "1.0",
   "manifest_version": 2,
-  "browser_action": {
+  "permissions": ["activeTab", "webNavigation", "bookmarks", "contextMenus"],
+  "omnibox": { "keyword": "nt" },
+  "page_action": {
     "default_popup": "index.html",
     "default_icon": "favicon.ico"
+  },
+  "background": {
+    "scripts": ["background.js", "runtime.js"]
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
   },
   "commands": {
     "_execute_browser_action": {
