@@ -1,0 +1,7 @@
+{
+  "name": "project-101",
+  "version": "1.0.0",
+  "description": "Simple browser extension as possible",
+  "main": "background.js",
+  "license": "MIT"
+}

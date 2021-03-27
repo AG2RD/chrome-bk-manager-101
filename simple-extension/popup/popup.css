@@ -1,0 +1,10 @@
+.greeting {
+  padding: 10px;
+}
+.body {
+  display: flex;
+  width: 150px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
