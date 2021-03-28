@@ -3,7 +3,7 @@
   "name": "Project 101",
   "version": "1.0",
   "description": "Simple extension as possible",
-  "permissions": ["tabs", "activeTab"],
+  "permissions": ["tabs", "activeTab", "bookmarks"],
   "browser_action": {
     "default_icon": "./icons/micro.png",
     "default_title": "Project 101",

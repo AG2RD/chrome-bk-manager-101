@@ -1,26 +1,11 @@
-const btn = document.querySelector('.btn');
-var port;
-
 (function () {
   console.log('init');
-  // chrome.tabs.query({ active: true, currentWindow: true }, function ([{ id }]) {
-  //   port = chrome.tabs.connect(tabs[0].id, { name: 'hope' });
-  // });
+  const btn = document.querySelector('.btn');
+  btn.onclick = function (e) {
+    // sendMessageTabs();
+    getParseTreeNode();
+  };
 })();
-btn.onclick = function (e) {
-  // sendMessage();
-  sendMessageTabs();
-};
-
-// sendMessage = function () {
-//   port.onDisconnect.addListener((obj) => {
-//     console.log('disconnected port');
-//   });
-//   port.postMessage({ command: 'test' });
-//   port.onMessage.addListener(function (response) {
-//     console.log('response intercepted', response);
-//   });
-// };
 
 sendMessageTabs = function () {
   chrome.tabs.query({ active: true, currentWindow: true }, function ([{ id }]) {
@@ -28,5 +13,14 @@ sendMessageTabs = function () {
     chrome.runtime.sendMessage({ command: 'test' }, function (response) {
       console.log('response', response);
     });
+  });
+};
+
+getParseTreeNode = function () {
+  chrome.bookmarks.getTree((tree) => {
+    console.log('tree', tree);
+    const elem = document.querySelector('.target');
+    console.log('elem', elem);
+    elem.innerHTML = tree[0].children[0].title;
   });
 };

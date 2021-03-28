@@ -3,16 +3,16 @@
   "description": "Bookmark manager with manifest v2",
   "version": "1.0",
   "manifest_version": 2,
-  "permissions": ["activeTab", "webNavigation", "bookmarks", "contextMenus"],
-  "omnibox": { "keyword": "nt" },
-  "page_action": {
+  "permissions": ["activeTab", "tabs", "webNavigation", "bookmarks", "contextMenus", "<all_urls>", "*://*/*"],
+  "browser_action": {
     "default_popup": "index.html#/popup",
     "default_icon": "favicon.ico"
   },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "background": {
     "scripts": ["background.js", "runtime.js"]
   },
   "chrome_url_overrides": {
-    "newtab": "index.html#/main"
+    "bookmarks": "index.html#/main"
   }
 }

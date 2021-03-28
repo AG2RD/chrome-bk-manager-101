@@ -1,1 +1,4 @@
 <p>main works!</p>
+<ul *ngIf="tree$ | async as tree">
+  <li *ngFor="let item of tree">{{ item.title }}</li>
+</ul>
