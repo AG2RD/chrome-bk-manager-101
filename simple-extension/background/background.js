@@ -1,6 +1,8 @@
 console.log('background');
+
 chrome.runtime.onInstalled.addListener(function () {
-  // console.log('installed');
+  // chrome.runtime.connect({ name: 'hope' });
+  console.log('installed');
   // chrome.runtime.onConnect.addListener((port) => {
   //   console.log('connected ', port);
   //   if (port.name === 'hope') {
@@ -12,6 +14,7 @@ chrome.runtime.onInstalled.addListener(function () {
   // });
 
   chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    console.log('request', request);
     if (request.command == 'test') sendResponse({ farewell: 'goodbye' });
   });
 });

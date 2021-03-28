@@ -3,6 +3,7 @@
   "name": "Project 101",
   "version": "1.0",
   "description": "Simple extension as possible",
+  "permissions": ["tabs", "activeTab"],
   "browser_action": {
     "default_icon": "./icons/micro.png",
     "default_title": "Project 101",
@@ -12,9 +13,12 @@
     "page": "background/background.html",
     "persistent": false
   },
+  "chrome_url_overrides": {
+    "bookmarks": "./main/main.html"
+  },
   "content_scripts": [
     {
-      "matches": ["*://gogle/*"],
+      "matches": ["*://*/*", "<all_urls>"],
       "js": ["content.js"]
     }
   ]
